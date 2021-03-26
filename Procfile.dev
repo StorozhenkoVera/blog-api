@@ -1,0 +1,2 @@
+web: PORT=4000 yarn --cwd blog-app start
+api: PORT=3001 bundle exec rails server
