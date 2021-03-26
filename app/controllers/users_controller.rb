@@ -16,6 +16,11 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+
+    render json: {
+      status: :ok
+    }
+
   end
 
   def show
