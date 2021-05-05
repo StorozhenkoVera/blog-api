@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
   helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!, :set_user
+  add_flash_types :success, :warning, :danger, :info
 
   def login!
     session[:user_id] = @user.id

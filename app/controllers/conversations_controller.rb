@@ -1,6 +1,8 @@
 class ConversationsController < ApplicationController
   def index
-
+    @conversations = Conversation.all
+    @users = User.all
+    #redirect_to conversation_messages_path(@conversation) unless @conversation
   end
 
   def create
@@ -13,7 +15,7 @@ class ConversationsController < ApplicationController
   end
 
   def show
-
+    @conversation = Conversation.find(params[:id])
   end
 
   private

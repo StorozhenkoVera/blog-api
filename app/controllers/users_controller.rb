@@ -1,20 +1,25 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
-    render json: @users, status: :ok
+
+    #render json: @users, status: :ok
+  end
+
+  def new
   end
 
   def show
     @user = User.find(params[:id])
-    render json: @user
+    #render json: @user
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: @user, status: :created
+      flash[:success] = 'User created'
+      redirect_to root_path
     else
-      render error: {error: 'Unable to create user'}, status: 400
+      flash.now[:error] = 'Unable to create user'
     end
   end
 

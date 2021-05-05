@@ -1,15 +1,21 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { Router } from "react-router-dom"
 
 class Conversations extends React.Component {
-    render () {
-        return (
-            <React.Fragment>
-                <textarea class='messages' >Area</textarea>
-            </React.Fragment>
-        );
-    }
+  render () {
+    return (
+      <React.Fragment>
+        <p>Chats</p>
+        <table>
+            {/*<%= users.each do |user| %>*/}
+
+          <tr>
+            <td><a href="#"> users</a></td>
+          </tr>
+        </table>
+      </React.Fragment>
+    );
+  }
+
 }
 
 export default Conversations
